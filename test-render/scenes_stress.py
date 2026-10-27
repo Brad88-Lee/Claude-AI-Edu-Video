@@ -51,3 +51,57 @@ class ST3_Long10min(Scene):
                 self.wait(4)
                 prev = eq
             self.play(FadeOut(title), FadeOut(prev), run_time=1)
+
+
+class ST4_Long33min(Scene):
+    """100 段公式推導，每段約 20 秒，共約 2000 秒（約 33 分鐘），用於測 4K 長時間算繪與單次背景指令上限。"""
+
+    def construct(self):
+        for i in range(100):
+            a, b, c = i % 9 + 1, 2 * (i % 7) + 3, i % 5 + 5
+            disc = b * b - 4 * a * c
+            title = Text("第 " + str(i + 1) + " 段推導", font=CJK_FONT, font_size=40).to_edge(UP)
+            eqs = [
+                MathTex(str(a) + "x^2 + " + str(b) + "x + " + str(c) + " = 0"),
+                MathTex(r"x^2 + \frac{" + str(b) + "}{" + str(a) + r"}x = -\frac{" + str(c) + "}{" + str(a) + "}"),
+                MathTex(r"x = \frac{-" + str(b) + r" \pm \sqrt{" + str(disc) + "}}{" + str(2 * a) + "}"),
+            ]
+            self.play(Write(title), run_time=1)
+            prev = None
+            for eq in eqs:
+                eq.scale(1.2)
+                if prev is None:
+                    self.play(Write(eq), run_time=2)
+                else:
+                    self.play(ReplacementTransform(prev, eq), run_time=2)
+                self.wait(4)
+                prev = eq
+            self.play(FadeOut(title), FadeOut(prev), run_time=1)
+
+
+class ST5_ImagesStatic(Scene):
+    """12 張圖，只淡入、靜止 3 秒、淡出（無逐格位移縮放），共約 60 秒。與 ST1 比較動態對耗時的影響。"""
+
+    def construct(self):
+        paths = sorted(glob.glob(os.path.join(STRESS_DIR, "img_*.png")))
+        if not paths:
+            raise RuntimeError("no stress images found")
+        for p in paths:
+            img = ImageMobject(p).scale_to_fit_height(5.2)
+            self.play(FadeIn(img), run_time=1)
+            self.wait(3)
+            self.play(FadeOut(img), run_time=1)
+
+
+class ST6_ImagesStaticJpg(Scene):
+    """同 ST5，但使用事先縮到 1920 寬的 JPEG（img_*.jpg），比較素材格式與尺寸的影響。"""
+
+    def construct(self):
+        paths = sorted(glob.glob(os.path.join(STRESS_DIR, "jpg", "img_*.jpg")))
+        if not paths:
+            raise RuntimeError("no jpg images found")
+        for p in paths:
+            img = ImageMobject(p).scale_to_fit_height(5.2)
+            self.play(FadeIn(img), run_time=1)
+            self.wait(3)
+            self.play(FadeOut(img), run_time=1)

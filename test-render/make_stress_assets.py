@@ -30,3 +30,16 @@ for i in range(12):
 
 total = sum(os.path.getsize(os.path.join(OUT_DIR, f)) for f in os.listdir(OUT_DIR))
 print(f"saved 12 images to {OUT_DIR}, total {total/1e6:.1f} MB")
+
+# 另外產生縮到 1920 寬的 JPEG 版本（供 ST6 與 FFmpeg 對照用；JPEG 不含透明度，RGBA 先鋪黑底）
+JPG_DIR = os.path.join(OUT_DIR, "jpg")
+os.makedirs(JPG_DIR, exist_ok=True)
+for i in range(12):
+    im = Image.open(os.path.join(OUT_DIR, f"img_{i:02d}.png"))
+    if im.mode == "RGBA":
+        bg = Image.new("RGB", im.size, (0, 0, 0))
+        bg.paste(im, mask=im.split()[3])
+        im = bg
+    im = im.convert("RGB").resize((1920, 1280))
+    im.save(os.path.join(JPG_DIR, f"img_{i:02d}.jpg"), quality=90)
+print("saved jpg versions")
