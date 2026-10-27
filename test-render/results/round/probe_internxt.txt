@@ -1,0 +1,58 @@
+== node/npm ==
+v22.22.0
+10.9.4
+== npm view ==
+version = '1.6.10'
+dist.unpackedSize = 497733
+npm notice
+npm notice New major version of npm available! 10.9.4 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+== install to temp prefix (不使用 -g，避免動到系統) ==
+npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+
+added 398 packages in 24s
+== cli version ==
+@internxt/cli/1.6.10 linux-x64 node-v22.22.0
+== cli help (前 15 行) ==
+Internxt CLI to manage your encrypted storage
+
+VERSION
+  @internxt/cli/1.6.10 linux-x64 node-v22.22.0
+
+USAGE
+  $ internxt [COMMAND]
+
+COMMANDS
+  add-cert                   Add a self-signed certificate to the trusted store
+                             for macOS, Linux, and Windows.
+  autocomplete               Display autocomplete installation instructions.
+  config                     Display useful information from the user logged
+                             into the Internxt CLI.
+  create-folder              Create a folder in your Internxt Drive
+== https://internxt.com ==
+HTTP/1.1 403 Forbidden
+curl: (56) CONNECT tunnel failed, response 403
+== https://drive.internxt.com ==
+HTTP/1.1 403 Forbidden
+curl: (56) CONNECT tunnel failed, response 403
+== https://gateway.internxt.com ==
+HTTP/1.1 403 Forbidden
+curl: (56) CONNECT tunnel failed, response 403
+== https://api.internxt.com ==
+HTTP/1.1 403 Forbidden
+curl: (56) CONNECT tunnel failed, response 403
+== https://drive.internxt.com/api ==
+HTTP/1.1 403 Forbidden
+curl: (56) CONNECT tunnel failed, response 403
+== https://uploads.github.com ==
+HTTP/1.1 200 Connection Established
+HTTP/1.1 400 Bad Request
+== https://api.github.com ==
+HTTP/1.1 200 Connection Established
+HTTP/1.1 400 Bad Request
+== https://storage.googleapis.com ==
+HTTP/1.1 200 Connection Established
+HTTP/2 400 
+== https://s3.amazonaws.com ==
+HTTP/1.1 200 Connection Established
+HTTP/1.1 405 Method Not Allowed
