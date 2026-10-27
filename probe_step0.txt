@@ -1,0 +1,132 @@
+## date/pwd/git
+Tue Oct 27 18:03:46 UTC 2026
+/home/user/claude-ai-edu-video
+origin	https://github.com/Brad88-Lee/claude-ai-edu-video (fetch)
+origin	https://github.com/Brad88-Lee/claude-ai-edu-video (push)
+probe/step0
+## versions
+v22.22.0
+10.9.4
+Python 3.11.17
+## setup
+161
+apache-maven-3.9.11
+claude-code
+cu-desktop
+edu-video-setup.done
+edu-video-setup.log
+env-runner
+google-cloud-sdk
+gradle
+gradle-8.14.3
+manim-venv
+maven
+node-tools
+node20
+node21
+node22
+nvm
+pw-browsers
+rbenv
+rclone
+rclone-attach
+ruby-3.1.6
+ruby-3.2.6
+ruby-3.3.6
+setup-apt_base.out
+setup-manim_pip.out
+setup-tex_fonts.out
+Name: pillow
+Version: 12.3.0
+Summary: Python Imaging Library (fork)
+## npm view
+1.6.10
+npm notice
+npm notice New major version of npm available! 10.9.4 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+## https://internxt.com
+HTTP/1.1 403 Forbidden
+Content-Type: text/plain; charset=utf-8
+X-Content-Type-Options: nosniff
+Content-Length: 70
+Connection: close
+## https://drive.internxt.com
+HTTP/1.1 403 Forbidden
+Content-Type: text/plain; charset=utf-8
+X-Content-Type-Options: nosniff
+Content-Length: 76
+Connection: close
+## https://gateway.internxt.com
+HTTP/1.1 403 Forbidden
+Content-Type: text/plain; charset=utf-8
+X-Content-Type-Options: nosniff
+Content-Length: 78
+Connection: close
+## https://api.internxt.com
+HTTP/1.1 403 Forbidden
+Content-Type: text/plain; charset=utf-8
+X-Content-Type-Options: nosniff
+Content-Length: 74
+Connection: close
+## https://uploads.github.com
+HTTP/1.1 200 Connection Established
+
+HTTP/1.1 400 Bad Request
+Content-Type: application/json; charset=utf-8
+Content-Length: 138
+## https://storage.googleapis.com
+HTTP/1.1 200 Connection Established
+
+HTTP/2 400 
+content-type: application/xml; charset=UTF-8
+x-guploader-uploadid: AP6rU81fX3F2ihRpEBSugfqtjSZBCyBC_3MsInuBZuhfSBjNVYnb9ya3ojAF-tccKQ8OLJRamSkOGmo
+## https://s3.amazonaws.com
+HTTP/1.1 200 Connection Established
+
+HTTP/1.1 405 Method Not Allowed
+Server: AmazonS3
+x-amz-request-id: 9KH8PAAA6XV1WC9A
+## env
+CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=<已隱藏>
+CLAUDE_CODE_ACCOUNT_UUID=<已隱藏>
+CLAUDE_CODE_CHILD_SESSION=<已隱藏>
+CLAUDE_CODE_USER_EMAIL=<已隱藏>
+CLAUDE_CODE_SESSION_ID=<已隱藏>
+CLAUDE_CODE_DEBUG=<已隱藏>
+CLAUDE_CODE_HIDE_SETTINGS_HINT=<已隱藏>
+CLAUDE_CODE_CCR_EVENT_FLUSH_POLICY=<已隱藏>
+CLAUDE_CODE_REMOTE_SDK_URL=<已隱藏>
+CLAUDE_CODE_BG_TASKS_REPORT_RUNNING=<已隱藏>
+CLAUDE_CODE_GZIP_REQUEST_BODIES=<已隱藏>
+CLAUDE_CODE_ARTIFACT_ASSETS=<已隱藏>
+CLAUDE_CODE_PROVIDER_MANAGED_BY_HOST=<已隱藏>
+CLAUDE_CODE_MESSAGING_SOCKET=<已隱藏>
+CLAUDE_CODE_CONTAINER_ID=<已隱藏>
+CLAUDE_CODE_REMOTE_ENVIRONMENT_TYPE=<已隱藏>
+CLAUDE_CODE_WORKER_EPOCH=<已隱藏>
+CLAUDE_CODE_SESSION_ATTENDED=<已隱藏>
+CLAUDE_CODE_REMOTE_SESSION_ID=<已隱藏>
+CLAUDE_CODE_PROXY_RESOLVES_HOSTS=<已隱藏>
+CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=<已隱藏>
+CLAUDE_CODE_DIAGNOSTICS_FILE=<已隱藏>
+CLAUDE_CODE_REMOTE_HERMETIC_MODE=<已隱藏>
+CLAUDE_CODE_ENVIRONMENT_RUNNER_VERSION=<已隱藏>
+CLAUDE_CODE_DISABLE_BUILTIN_ANTMCP=<已隱藏>
+CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=<已隱藏>
+CLAUDE_CODE_USE_CCR_V2=<已隱藏>
+CLAUDE_CODE_SYNC_SESSION_REFS=<已隱藏>
+CLAUDE_CODE_TEE_SDK_STDOUT=<已隱藏>
+CLAUDE_CODE_ENTRYPOINT=<已隱藏>
+CLAUDE_CODE_HOSTED_DESKTOP=<已隱藏>
+CLAUDE_CODE_VERSION=<已隱藏>
+CLAUDE_CODE_EXECPATH=<已隱藏>
+CLAUDE_CODE_ELEGANT_MEADOW=<已隱藏>
+CLAUDE_CODE_REMOTE_SEND_KEEPALIVES=<已隱藏>
+CLAUDE_CODE_REMOTE=<已隱藏>
+CLAUDE_CODE_POST_FOR_SESSION_INGRESS_V2=<已隱藏>
+CLAUDE_CODE_ORGANIZATION_UUID=<已隱藏>
+CLAUDE_CODE_SYNC_SKILLS=<已隱藏>
+CLAUDE_CODE_HOLD_UNANSWERED_PARKED_PERMISSION=<已隱藏>
+CLAUDE_CODE_MESSAGING_TOKEN=<已隱藏>
