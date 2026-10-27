@@ -1,0 +1,6 @@
+test-render/media/
+test-render/results/logs/
+test-render/results/run.log
+test-render/assets/
+*.mp4
+__pycache__/
