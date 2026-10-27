@@ -38,7 +38,12 @@ def main():
         lines.append(f"| {r['label']} | {r['rc']} | {r['elapsed_s']} | "
                      f"{r['peak_rss_mb']:.0f} | {r['cpu_user_s']} |")
 
+    failed = [r["label"] for r in rows if r["rc"] != 0]
+    lines += ["", "## 失敗項目", ""]
+    lines += [f"- {x}" for x in failed] if failed else ["- 無（全部步驟 rc=0）"]
+
     lines += ["", "## 成品與外推（粗估）", ""]
+    lines += ["> 測試場景很簡單，外推只當下限參考；若有失敗場景，影片長度與耗時不完整。", ""]
     for res in ("480", "1080"):
         finals = glob.glob(os.path.join(media, res, f"final_{res}p.mp4"))
         render_s = sum(r["elapsed_s"] for r in rows

@@ -29,7 +29,7 @@ fi
   echo "=== setup log ==="; cat /opt/edu-video-setup.log 2>/dev/null || echo "(no setup log)"
   echo "=== setup done marker (seconds) ==="; cat /opt/edu-video-setup.done 2>/dev/null || echo "(none)"
   echo "=== versions ==="
-  "$PY" --version; "$VENV/bin/pip" show manim | grep -E '^(Name|Version)'
+  "$PY" --version; "$VENV/bin/pip" show manim pillow numpy | grep -E '^(Name|Version)'
   ffmpeg -version | head -1
   xelatex --version | head -1
   dvisvgm --version 2>&1 | head -1

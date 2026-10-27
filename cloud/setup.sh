@@ -52,10 +52,20 @@ stage_tex_fonts() {
 }
 
 # ---- 階段 2b：在獨立 venv 安裝 Manim Community（與 2a 平行執行）----
+# 在每行輸出前加上「距腳本開始的秒數」，之後可看出 pip 的 235s 花在哪個套件
+stamp() { while IFS= read -r line; do echo "[+$(( $(date +%s) - T0 ))s] $line"; done; }
+
+# Pillow 固定為 12.3.0：實測 Pillow 13.0.0 會讓 Manim 0.22.0 顯示 ImageMobject 時出錯
+# （Image.fromarray(..., mode="RGBA") 觸發 ValueError），12.3.0 實測可正常運作。
+# Manim 對 Pillow 只有下限（>=11.0），沒有上限，所以必須在這裡明確固定。
+PILLOW_VER="12.3.0"
+
 stage_manim_pip() {
   python3 -m venv /opt/manim-venv || return 1
-  /opt/manim-venv/bin/pip install --quiet --upgrade pip || return 1
-  /opt/manim-venv/bin/pip install --quiet manim
+  /opt/manim-venv/bin/pip install --progress-bar off --upgrade pip 2>&1 | stamp
+  [ "${PIPESTATUS[0]}" -eq 0 ] || return 1
+  /opt/manim-venv/bin/pip install --progress-bar off manim "pillow==${PILLOW_VER}" 2>&1 | stamp
+  return "${PIPESTATUS[0]}"
 }
 
 run_stage apt_base stage_apt_base
@@ -74,7 +84,11 @@ fc-cache -f >/dev/null 2>&1
   echo "system python: $(python3 --version 2>&1)"
   if [ -x /opt/manim-venv/bin/python ]; then
     echo "venv python: $(/opt/manim-venv/bin/python --version 2>&1)"
-    /opt/manim-venv/bin/pip show manim 2>/dev/null | grep -E '^(Name|Version)'
+    /opt/manim-venv/bin/pip show manim pillow numpy 2>/dev/null | grep -E '^(Name|Version)'
+    PIL_NOW=$(/opt/manim-venv/bin/python -c 'import PIL; print(PIL.__version__)' 2>&1)
+    if [ "$PIL_NOW" != "$PILLOW_VER" ]; then
+      echo "WARN pillow version is $PIL_NOW, expected $PILLOW_VER"
+    fi
   else
     echo "MISSING venv: /opt/manim-venv"
   fi
