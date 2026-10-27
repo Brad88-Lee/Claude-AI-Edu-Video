@@ -1,0 +1,25 @@
+[+0s] START apt_base
+[+46s] END   apt_base rc=0 took=46s
+[+46s] START tex_fonts
+[+46s] START manim_pip
+[+121s] END   tex_fonts rc=0 took=75s
+[+158s] END   manim_pip rc=0 took=112s
+--- verification ---
+system python: Python 3.13.17
+venv python: Python 3.13.17
+Name: manim
+Version: 0.22.0
+Name: pillow
+Version: 12.3.0
+Name: numpy
+Version: 2.5.4
+OK      xelatex: XeTeX 3.141592653-2.6-0.999995 (TeX Live 2023/Debian)
+OK      latex: pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)
+OK      dvisvgm: dvisvgm 3.2.1
+OK      ffmpeg: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+fc-list entries matching 'Noto Sans CJK TC': 2
+fc-list entries matching 'Noto Sans CJK'   : 10
+pango: 1.52.1
+cairo: 1.18.0
+/dev/vda        252G   11G   29G  27% /
+[+162s] TOTAL 162s (cache budget is roughly 300s)

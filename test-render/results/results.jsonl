@@ -1,0 +1,8 @@
+{"label": "render_480p_S1_Formula", "rc": 0, "elapsed_s": 5.7, "peak_rss_mb": 331.0, "cpu_user_s": 5.4, "cpu_sys_s": 2.3}
+{"label": "render_480p_S2_ImageAndCJKTex", "rc": 0, "elapsed_s": 6.0, "peak_rss_mb": 382.0, "cpu_user_s": 5.9, "cpu_sys_s": 1.7}
+{"label": "render_480p_S3_Graph", "rc": 0, "elapsed_s": 4.6, "peak_rss_mb": 332.0, "cpu_user_s": 4.9, "cpu_sys_s": 1.1}
+{"label": "ffmpeg_concat_480p", "rc": 0, "elapsed_s": 1.6, "peak_rss_mb": 136.0, "cpu_user_s": 2.3, "cpu_sys_s": 0.4}
+{"label": "render_1080p_S1_Formula", "rc": 0, "elapsed_s": 14.3, "peak_rss_mb": 733.0, "cpu_user_s": 18.9, "cpu_sys_s": 5.4}
+{"label": "render_1080p_S2_ImageAndCJKTex", "rc": 0, "elapsed_s": 17.8, "peak_rss_mb": 848.0, "cpu_user_s": 23.3, "cpu_sys_s": 2.2}
+{"label": "render_1080p_S3_Graph", "rc": 0, "elapsed_s": 9.9, "peak_rss_mb": 685.0, "cpu_user_s": 13.7, "cpu_sys_s": 2.2}
+{"label": "ffmpeg_concat_1080p", "rc": 0, "elapsed_s": 6.9, "peak_rss_mb": 413.0, "cpu_user_s": 19.3, "cpu_sys_s": 1.2}

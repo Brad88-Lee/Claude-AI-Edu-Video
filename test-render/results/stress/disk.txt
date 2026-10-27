@@ -1,0 +1,18 @@
+--- after render_4k_S1_Formula (16:47:57) ---
+3.6M	/home/user/Claude-AI-Edu-Video/test-render/media/stress/4k_basic
+/dev/vda        252G   11G   29G  27% /
+--- after render_4k_S2_ImageAndCJKTex (16:49:01) ---
+6.9M	/home/user/Claude-AI-Edu-Video/test-render/media/stress/4k_basic
+/dev/vda        252G   11G   29G  27% /
+--- after render_4k_S3_Graph (16:49:28) ---
+8.0M	/home/user/Claude-AI-Edu-Video/test-render/media/stress/4k_basic
+/dev/vda        252G   11G   29G  27% /
+--- after render_1080p_ST1_Images12 (16:52:57) ---
+17M	/home/user/Claude-AI-Edu-Video/test-render/media/stress/img1080
+/dev/vda        252G   11G   29G  27% /
+--- after render_4k_ST1_Images12 (17:03:52) ---
+37M	/home/user/Claude-AI-Edu-Video/test-render/media/stress/img4k
+/dev/vda        252G   11G   29G  27% /
+--- after render_1080p_ST3_Long10min (17:07:52) ---
+16M	/home/user/Claude-AI-Edu-Video/test-render/media/stress/long1080
+/dev/vda        252G   11G   29G  27% /

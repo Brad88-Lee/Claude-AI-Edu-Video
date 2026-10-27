@@ -1,0 +1,18 @@
+=== start ===
+Tue Oct 27 16:46:59 UTC 2026
+=== versions ===
+Python 3.13.17
+Name: manim
+Version: 0.22.0
+Name: pillow
+Version: 12.3.0
+Name: numpy
+Version: 2.5.4
+=== nproc / memory ===
+4
+               total        used        free      shared  buff/cache   available
+Mem:           16091         615       13524          14        2245       15475
+Swap:              0           0           0
+=== disk ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda        252G   11G   29G  27% /
