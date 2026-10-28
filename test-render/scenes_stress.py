@@ -133,3 +133,15 @@ class ST7_Chunk(Scene):
                 self.wait(4)
                 prev = eq
             self.play(FadeOut(title), FadeOut(prev), run_time=1)
+
+
+class ST8_OverlayFormula(Scene):
+    """透明背景的公式疊圖，約 10 秒。用 manim -t 算繪（輸出帶 alpha 的 .mov），再用 ffmpeg 疊在圖片影片上，測混合管線。"""
+
+    def construct(self):
+        title = Text("疊圖測試：二次公式", font=CJK_FONT, font_size=44).to_edge(UP)
+        eq = MathTex(r"x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}").scale(1.6)
+        self.play(Write(title), run_time=1.5)
+        self.play(Write(eq), run_time=2.5)
+        self.wait(5)
+        self.play(FadeOut(title), FadeOut(eq), run_time=1)
