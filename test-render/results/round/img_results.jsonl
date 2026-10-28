@@ -1,0 +1,4 @@
+{"label": "img1080_ST1_Images12", "rc": 0, "elapsed_s": 268.4, "peak_rss_mb": 1058.0, "cpu_user_s": 292.6, "cpu_sys_s": 44.4}
+{"label": "img1080_ST5_ImagesStatic", "rc": 0, "elapsed_s": 117.4, "peak_rss_mb": 725.0, "cpu_user_s": 132.9, "cpu_sys_s": 19.0}
+{"label": "img1080_ST6_ImagesStaticJpg", "rc": 0, "elapsed_s": 145.5, "peak_rss_mb": 843.0, "cpu_user_s": 144.5, "cpu_sys_s": 33.3}
+{"label": "img1080_ffmpeg", "rc": 0, "elapsed_s": 22.3, "peak_rss_mb": 604.0, "cpu_user_s": 46.9, "cpu_sys_s": 1.5}

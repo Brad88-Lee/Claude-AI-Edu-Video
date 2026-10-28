@@ -1,0 +1,4 @@
+/home/user/claude-ai-edu-video/test-render/media/imgcmp/ST5_ImagesStatic/videos/scenes_stress/1080p30/ST5_ImagesStatic.mp4 60.000000,3845447
+/home/user/claude-ai-edu-video/test-render/media/imgcmp/ST6_ImagesStaticJpg/videos/scenes_stress/1080p30/ST6_ImagesStaticJpg.mp4 60.000000,3725077
+/home/user/claude-ai-edu-video/test-render/media/imgcmp/ffmpeg/ff_images.mp4 48.000000,2636140
+/home/user/claude-ai-edu-video/test-render/media/imgcmp/ST1_Images12/videos/scenes_stress/1080p30/ST1_Images12.mp4 60.000000,8522010
