@@ -1,0 +1,5 @@
+{"label": "chunk_4k_0", "rc": 0, "elapsed_s": 775.3, "peak_rss_mb": 3399.0, "cpu_user_s": 1110.2, "cpu_sys_s": 285.3}
+{"label": "chunk_4k_1", "rc": 0, "elapsed_s": 609.4, "peak_rss_mb": 3409.0, "cpu_user_s": 1101.6, "cpu_sys_s": 105.2}
+{"label": "chunk_4k_2", "rc": 0, "elapsed_s": 766.9, "peak_rss_mb": 3403.0, "cpu_user_s": 1129.9, "cpu_sys_s": 307.7}
+{"label": "chunk_4k_3", "rc": 0, "elapsed_s": 784.1, "peak_rss_mb": 2277.0, "cpu_user_s": 1120.7, "cpu_sys_s": 374.6}
+{"label": "chunk_4k_4", "rc": 0, "elapsed_s": 772.5, "peak_rss_mb": 3401.0, "cpu_user_s": 1178.9, "cpu_sys_s": 290.0}
