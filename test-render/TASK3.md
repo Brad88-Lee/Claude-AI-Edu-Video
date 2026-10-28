@@ -22,7 +22,7 @@
 ## 階段 B：第 3+2 點長算繪（預估 40～60 分鐘）
 
 1. 用 Bash 工具的背景模式啟動，**逾時請設 `3600000` 毫秒（60 分鐘）**：
-   `bash test-render/run_long4k.sh`
+   `TAG=round-N bash test-render/run_long4k.sh`（N 同上；此變數讓腳本每 10 分鐘把進度推到 GitHub，即使 session 中途被回收也留得住紀錄）
 2. 啟動後**不要做任何事、不要輪詢**，只等完成通知。
 3. 回報時務必寫下：
    - 指令是否正常完成、總耗時；
@@ -44,7 +44,7 @@
 
 ## 提交
 
-建立並推送新分支 `test/round-1`，**只提交** `test-render/results/round/` 內的以下檔案：
+建立並推送新分支 `test/round-N`（N 由排程 prompt 指定），**只提交** `test-render/results/round/` 內的以下檔案：
 `probe_internxt.txt`、`long_results.jsonl`、`long_heartbeat.log`、`long_start.txt`、`long_render.log` 的最後 50 行（存成 `long_render_tail.txt`）、
 `img_results.jsonl`、`img_videos.txt`，以及你寫的 `report.md`（回報內容，格式見下）。
 **不要提交** `media/`、`.mp4`、`assets/`，不要推送到 main。

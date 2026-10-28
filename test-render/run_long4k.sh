@@ -3,7 +3,9 @@
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV=/opt/manim-venv; OUT="$ROOT/results/round"; mkdir -p "$OUT"
 JSONL="$OUT/long_results.jsonl"; HB="$OUT/long_heartbeat.log"; : > "$JSONL"; : > "$HB"
-( while true; do echo "$(date +%s) $(df --output=used / | tail -1 | tr -d ' ') $(free -m | awk '/Mem/{print $3}')" >> "$HB"; sleep 20; done ) &
+ANIM() { tail -c 30000 "$OUT/long_render.log" 2>/dev/null | tr '\r' '\n' | grep -o 'Animation [0-9]*' | tail -1 | tr -d 'A-Za-z '; }
+( n=0; while true; do echo "$(date +%s) $(df --output=used / | tail -1 | tr -d ' ') $(free -m | awk '/Mem/{print $3}') anim=$(ANIM)" >> "$HB"; n=$((n+1)); \
+  if [ -n "$TAG" ] && [ $((n % 30)) -eq 0 ]; then bash "$ROOT/push_progress.sh" "progress/$TAG" "$HB" "$OUT/long_start.txt"; fi; sleep 20; done ) &
 HB_PID=$!; trap 'kill $HB_PID 2>/dev/null' EXIT
 if "$VENV/bin/manim" render --help 2>&1 | grep -q -- '--frame_rate'; then FPS_FLAG="--frame_rate"; else FPS_FLAG="--fps"; fi
 date -u > "$OUT/long_start.txt"

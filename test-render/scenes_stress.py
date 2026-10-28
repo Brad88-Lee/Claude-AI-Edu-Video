@@ -105,3 +105,31 @@ class ST6_ImagesStaticJpg(Scene):
             self.play(FadeIn(img), run_time=1)
             self.wait(3)
             self.play(FadeOut(img), run_time=1)
+
+
+class ST7_Chunk(Scene):
+    """ST4 的分段版：由環境變數 SEG_START、SEG_COUNT 指定從第幾段（0 起算）開始、共幾段。內容與 ST4 對應的段完全相同。"""
+
+    def construct(self):
+        start = int(os.environ.get("SEG_START", "0"))
+        count = int(os.environ.get("SEG_COUNT", "20"))
+        for i in range(start, start + count):
+            a, b, c = i % 9 + 1, 2 * (i % 7) + 3, i % 5 + 5
+            disc = b * b - 4 * a * c
+            title = Text("第 " + str(i + 1) + " 段推導", font=CJK_FONT, font_size=40).to_edge(UP)
+            eqs = [
+                MathTex(str(a) + "x^2 + " + str(b) + "x + " + str(c) + " = 0"),
+                MathTex(r"x^2 + \frac{" + str(b) + "}{" + str(a) + r"}x = -\frac{" + str(c) + "}{" + str(a) + "}"),
+                MathTex(r"x = \frac{-" + str(b) + r" \pm \sqrt{" + str(disc) + "}}{" + str(2 * a) + "}"),
+            ]
+            self.play(Write(title), run_time=1)
+            prev = None
+            for eq in eqs:
+                eq.scale(1.2)
+                if prev is None:
+                    self.play(Write(eq), run_time=2)
+                else:
+                    self.play(ReplacementTransform(prev, eq), run_time=2)
+                self.wait(4)
+                prev = eq
+            self.play(FadeOut(title), FadeOut(prev), run_time=1)
