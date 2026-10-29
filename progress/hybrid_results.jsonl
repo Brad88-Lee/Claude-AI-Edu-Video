@@ -1,0 +1,8 @@
+{"label": "hy_manim_4k_formula3", "rc": 0, "elapsed_s": 129.8, "peak_rss_mb": 2436.0, "cpu_user_s": 167.3, "cpu_sys_s": 48.3}
+{"label": "hy_ffmpeg_4k_images_static", "rc": 0, "elapsed_s": 52.9, "peak_rss_mb": 1146.0, "cpu_user_s": 150.5, "cpu_sys_s": 5.6}
+{"label": "hy_ffmpeg_4k_images_zoom", "rc": 0, "elapsed_s": 58.7, "peak_rss_mb": 1139.0, "cpu_user_s": 178.1, "cpu_sys_s": 5.4}
+{"label": "hy_concat_copy_A", "rc": 0, "elapsed_s": 0.2, "peak_rss_mb": 70.0, "cpu_user_s": 0.1, "cpu_sys_s": 0.1}
+{"label": "hy_concat_copy_B", "rc": 0, "elapsed_s": 0.2, "peak_rss_mb": 70.0, "cpu_user_s": 0.1, "cpu_sys_s": 0.1}
+{"label": "hy_mux_audio", "rc": 0, "elapsed_s": 0.8, "peak_rss_mb": 68.0, "cpu_user_s": 0.6, "cpu_sys_s": 0.3}
+{"label": "hy_manim_1080_transparent", "rc": 0, "elapsed_s": 4.3, "peak_rss_mb": 288.0, "cpu_user_s": 4.8, "cpu_sys_s": 0.8}
+{"label": "hy_overlay_ffmpeg", "rc": 0, "elapsed_s": 5.3, "peak_rss_mb": 576.0, "cpu_user_s": 15.8, "cpu_sys_s": 0.9}

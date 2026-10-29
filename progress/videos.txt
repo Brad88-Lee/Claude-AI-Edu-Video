@@ -1,0 +1,5 @@
+/home/user/claude-ai-edu-video/test-render/media/hybrid/final_A.mp4 108.000000,9716654
+/home/user/claude-ai-edu-video/test-render/media/hybrid/final_B.mp4 108.000000,18343289
+/home/user/claude-ai-edu-video/test-render/media/hybrid/ffA/images.mp4 48.000000,7983232
+/home/user/claude-ai-edu-video/test-render/media/hybrid/ffB/images.mp4 48.000000,16609862
+/home/user/claude-ai-edu-video/test-render/media/hybrid/m/videos/scenes_stress/2160p30/formula3.mp4 60.000000,1734342

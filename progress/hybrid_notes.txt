@@ -1,0 +1,15 @@
+[00:07:16] formula video: /home/user/claude-ai-edu-video/test-render/media/hybrid/m/videos/scenes_stress/2160p30/formula3.mp4
+codec_name=h264
+profile=High
+width=3840
+height=2160
+pix_fmt=yuv420p
+r_frame_rate=30/1
+time_base=1/15360
+duration=60.000000
+[00:09:08] concat copy A: [measure] hy_concat_copy_A: rc=0 0.2s peak_rss=70.0MB 
+[00:09:08] streams A: h264,3840,2160,30/1 108.000000,9716654 
+[00:09:09] concat copy B: [measure] hy_concat_copy_B: rc=0 0.2s peak_rss=70.0MB 
+[00:09:09] streams B: h264,3840,2160,30/1 108.000000,18343289 
+[00:09:11] mux: 108.000000,9827953 
+[00:09:15] overlay file: 5974817 bytes; qtrle,argb
